@@ -12,6 +12,9 @@ Just used react to make it
 
 
 
+
+
+
 ## ignore this if u know how react works
 # Getting Started with Create React App
 
