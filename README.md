@@ -1,15 +1,19 @@
 
 #
-Convert it into function(state based ) from class based 
-NOTE :---- prev code are not good gives error and not good this is in working condition
+Converted it into function(state based ) from class based 
+NOTE :---- prev commits are not good gives error and not good       ......   this is in working condition
 Just used react to make it
 
+link of the website :-
+https://neelbiswas123.github.io/Word-Counter-and-Case-Converter-FunctionBased/
 
 
-
-
-
-
+## how to use it
+Just fork or download it..
+then go to the project folder and open terminal 
+there paste this command "npm install" 
+after the installation just run this command "npm start"   
+ ->>>> website will start on your browser
 
 
 
