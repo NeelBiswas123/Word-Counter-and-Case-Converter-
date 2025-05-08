@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Word-Counter-and-Case-Converter-/static/css/main.ac7412b4.css",
-    "main.js": "/Word-Counter-and-Case-Converter-/static/js/main.fb506201.js",
-    "static/js/453.ed3810f9.chunk.js": "/Word-Counter-and-Case-Converter-/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/Word-Counter-and-Case-Converter-/index.html",
-    "main.ac7412b4.css.map": "/Word-Counter-and-Case-Converter-/static/css/main.ac7412b4.css.map",
-    "main.fb506201.js.map": "/Word-Counter-and-Case-Converter-/static/js/main.fb506201.js.map",
-    "453.ed3810f9.chunk.js.map": "/Word-Counter-and-Case-Converter-/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/Word-Counter-and-Case-Converter-FunctionBased/static/css/main.ac7412b4.css",
+    "main.js": "/Word-Counter-and-Case-Converter-FunctionBased/static/js/main.f50b1174.js",
+    "static/js/453.ed3810f9.chunk.js": "/Word-Counter-and-Case-Converter-FunctionBased/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/Word-Counter-and-Case-Converter-FunctionBased/index.html",
+    "main.ac7412b4.css.map": "/Word-Counter-and-Case-Converter-FunctionBased/static/css/main.ac7412b4.css.map",
+    "main.f50b1174.js.map": "/Word-Counter-and-Case-Converter-FunctionBased/static/js/main.f50b1174.js.map",
+    "453.ed3810f9.chunk.js.map": "/Word-Counter-and-Case-Converter-FunctionBased/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac7412b4.css",
-    "static/js/main.fb506201.js"
+    "static/js/main.f50b1174.js"
   ]
 }
