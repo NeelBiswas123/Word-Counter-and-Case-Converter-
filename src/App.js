@@ -1,73 +1,64 @@
 import './App.css';
+import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
+import About from './components/About';
+import React, { useState } from 'react';
+import Alert from './components/Alert';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
-import { useState } from 'react';
-import About from './About';
-import Navbar from './Navbar';
-import Textutils from "./Textutils";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Alert from './Alert';
-
+ 
 function App() {
+  const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
+  const [alert, setAlert] = useState(null);
 
-  // this is for darkmode func
-  const [mode, setMode] = useState("light")
-
-  const toggleMode = () => {
-      
-      
-      if(mode ==="light"){
-        console.log("dark mode enable");
-        
-      setMode("dark")
-      document.body.style.backgroundColor = "black"
-      // document.title="dark mode "
-      
-      
-      
-    }
-    else {
-      console.log("light mode enable");
-      
-      setMode("light")
-      document.body.style.backgroundColor = "white"
-      // document.title="light mode "
-     
-      }
+  const showAlert = (message, type)=>{
+      setAlert({
+        msg: message,
+        type: type
+      })
+      setTimeout(() => {
+          setAlert(null);
+      }, 1500);
   }
 
-
-  // this is for alert func 
-
-  const [alert,setAlert]=useState()
-  
-      function ShowAlert(message,type){
-        setAlert(
-         { msg : message,
-          type : type}
-        )
-        setTimeout(() => {
-          setAlert(null)
-        }, 1500);
-      }
-    
-
-
+  const toggleMode = ()=>{
+    if(mode === 'light'){
+      setMode('dark');
+      document.body.style.backgroundColor = '#042743';
+      showAlert("Dark mode has been enabled", "success");
+    }
+    else{
+      setMode('light');
+      document.body.style.backgroundColor = 'white';
+      showAlert("Light mode has been enabled", "success");
+    }
+  }
   return (
-    <div className="App">
+    <>
+    <Router>
+    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
+    <Alert alert={alert}/>
+    <div className="container my-3">
+    <Routes>
+    {/* /users --> Component 1
+        /users/home --> Component 2 */}
+          <Route exact path="/about">
+          <Route exact path="/about" element={<About mode={mode} />} />
 
-      
-      <Router>
-      <Navbar title ="textUtils" mode = {mode}  toggleMode={toggleMode} />
-      <Alert  alert={alert}/>
-        <Routes>
-        <Route path="/" element={
-                  <Textutils showalert={ShowAlert} heading="Welcome to Case Converter" mode={mode}/>} />
+          </Route>
+          <Route exact path="/">
+            {/* <TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode}/> */}
+            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />} />
 
-          <Route path="/about" exact element={<About  mode={mode}/>} />
-          <Route path="/textutils" element={<Textutils showalert={ShowAlert} heading="Welcome to Case Converter" mode={mode}/>} />
-        </Routes>
-      </Router>
+          </Route>
+    </Routes>
     </div>
+    </Router>
+    </> 
   );
 }
 
