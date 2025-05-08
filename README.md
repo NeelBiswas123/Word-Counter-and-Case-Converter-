@@ -17,12 +17,6 @@ after the installation just run this command "npm start"
 
 
 
-
-
-
-
-
-
 ## ignore this if u know how react works !!
 # Getting Started with Create React App
 
